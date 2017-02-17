@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="gUV-vd-G2p">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="zCX-Yz-yZl">
+            <objects>
+                <collectionViewController id="gUV-vd-G2p" customClass="ViewController" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="PT2-08-CCN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Rvm-0f-UyL" customClass="FlowLayout">
+                            <size key="itemSize" width="143" height="194"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="50" height="50"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="cell" reuseIdentifier="cell" id="nwh-X9-5Ck" customClass="ImageCell">
+                                <rect key="frame" x="0.0" y="0.0" width="143" height="194"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="143" height="194"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uBz-ZV-bUi">
+                                            <rect key="frame" x="0.0" y="0.0" width="143" height="194"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yZD-Ip-pWv">
+                                            <rect key="frame" x="0.0" y="161" width="143" height="18"/>
+                                            <color key="backgroundColor" red="0.66663030733282858" green="1" blue="0.94501754123089032" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="yZD-Ip-pWv" secondAttribute="bottom" constant="15" id="8xH-36-AVq"/>
+                                    <constraint firstItem="uBz-ZV-bUi" firstAttribute="leading" secondItem="nwh-X9-5Ck" secondAttribute="leading" id="Ct6-fs-yWE"/>
+                                    <constraint firstItem="uBz-ZV-bUi" firstAttribute="top" secondItem="nwh-X9-5Ck" secondAttribute="top" id="ImK-dW-l1g"/>
+                                    <constraint firstAttribute="trailing" secondItem="uBz-ZV-bUi" secondAttribute="trailing" id="Oya-u8-yad"/>
+                                    <constraint firstAttribute="bottom" secondItem="uBz-ZV-bUi" secondAttribute="bottom" id="c7m-Z6-LB5"/>
+                                    <constraint firstAttribute="trailing" secondItem="yZD-Ip-pWv" secondAttribute="trailing" id="lSB-P4-eiW"/>
+                                    <constraint firstItem="yZD-Ip-pWv" firstAttribute="leading" secondItem="nwh-X9-5Ck" secondAttribute="leading" id="q58-IY-r1G"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="cellImageView" destination="uBz-ZV-bUi" id="2f7-oy-GVB"/>
+                                    <outlet property="cellLabel" destination="yZD-Ip-pWv" id="2sm-7K-kDF"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="footer" id="r7q-tn-g4q" customClass="FootView">
+                            <rect key="frame" x="0.0" y="194" width="375" height="50"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="6Bv-cU-zas">
+                                    <rect key="frame" x="177.5" y="15" width="20" height="20"/>
+                                </activityIndicatorView>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="6Bv-cU-zas" firstAttribute="centerY" secondItem="r7q-tn-g4q" secondAttribute="centerY" id="Btp-4O-MZa"/>
+                                <constraint firstItem="6Bv-cU-zas" firstAttribute="centerX" secondItem="r7q-tn-g4q" secondAttribute="centerX" id="flR-Tc-Ze8"/>
+                            </constraints>
+                            <connections>
+                                <outlet property="activityView" destination="6Bv-cU-zas" id="071-Gh-Z2m"/>
+                            </connections>
+                        </collectionReusableView>
+                        <connections>
+                            <outlet property="dataSource" destination="gUV-vd-G2p" id="jGt-lX-cq3"/>
+                            <outlet property="delegate" destination="gUV-vd-G2p" id="nkT-up-v1s"/>
+                        </connections>
+                    </collectionView>
+                    <connections>
+                        <outlet property="flowLayout" destination="Rvm-0f-UyL" id="lzx-iF-ztf"/>
+                    </connections>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7xj-kN-Yp7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-511.19999999999999" y="105.69715142428787"/>
+        </scene>
+    </scenes>
+</document>
